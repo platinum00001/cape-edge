@@ -542,12 +542,12 @@ footer h4{color:var(--navy)}footer a:hover{color:#0b74c6}
   <div class="wrap center">
     <span class="eyebrow">Order with Cape Edge</span>
     <h2>Simple ordering for approved practices</h2>
-    <p class="lead">Once your practice is verified, you'll get Cape Edge partner pricing and can order by invoice. No consumer checkout, no guesswork.</p>
+    <p class="lead">Every order runs through Cape Edge. We review and confirm each request personally, then process it and ship it to your verified practice. No consumer checkout.</p>
   </div>
   <div class="wrap order-grid">
-    <div class="order-card"><span class="step-n">1</span><h3>Apply</h3><p>Submit your practice details, NPI and license for verification.</p><a class="btn btn-primary" href="#apply">Apply for a clinical account</a></div>
-    <div class="order-card"><span class="step-n">2</span><h3>Get partner pricing</h3><p>Receive your Cape Edge price sheet and volume tiers: [PRICE].</p><a class="btn btn-outline" href="#apply">Request partner pricing</a></div>
-    <div class="order-card"><span class="step-n">3</span><h3>Order &amp; pay by invoice</h3><p>Place your order and we'll send a practice invoice before cold-chain dispatch.</p><a class="btn btn-primary" href="#apply">Request a practice invoice</a></div>
+    <div class="order-card"><span class="step-n">1</span><h3>Apply for a Cape Edge clinical account</h3><p>Submit your practice details, NPI and license. We verify your credentials before any order is accepted.</p><a class="btn btn-primary" href="#apply" data-req="account">Apply for a clinical account</a></div>
+    <div class="order-card"><span class="step-n">2</span><h3>Send your order request</h3><p>Tell us the products and quantities you need. We confirm pricing ([PRICE]), availability and your practice details with you.</p><a class="btn btn-outline" href="#apply" data-req="order">Send an order request</a></div>
+    <div class="order-card"><span class="step-n">3</span><h3>We confirm &amp; process your order</h3><p>Once you confirm, we process the order and it ships to your practice, cold-chain packed with tracking.</p></div>
   </div>
 </section>
 
@@ -557,7 +557,7 @@ footer h4{color:var(--navy)}footer a:hover{color:#0b74c6}
     <div>
       <span class="eyebrow">Cape Edge Clinical Partners</span>
       <h2>Become a Cape Edge Clinical Partner</h2>
-      <p class="lead">Cape Edge sells only to licensed healthcare professionals and their practices. Tell us about your practice and we'll verify your credentials, usually within [2] business days.</p>
+      <p class="lead">Cape Edge sells only to licensed healthcare professionals and their practices. Tell us about your practice and we'll verify your credentials, usually within [2] business days. Approved practices can use the same form to send an order request.</p>
       <ul class="checks">
         <li>Practitioner pricing and volume tiers</li>
         <li>Lot COAs and storage documentation</li>
@@ -565,8 +565,9 @@ footer h4{color:var(--navy)}footer a:hover{color:#0b74c6}
         <li>Dedicated account contact</li>
       </ul>
     </div>
-    <form id="acct" onsubmit="event.preventDefault();document.getElementById('ok').style.display='block';this.reset();">
+    <form id="acct" onsubmit="event.preventDefault();document.getElementById('ok').style.display='block';this.reset();document.getElementById('ordwrap').style.display='none';">
       <div class="fgrid">
+        <div class="full"><label for="rt">Request type *</label><select id="rt" required onchange="document.getElementById('ordwrap').style.display=this.value==='order'?'block':'none';document.getElementById('ordtxt').required=this.value==='order'"><option value="account">New clinical account application</option><option value="order">Order request (approved or pending account)</option></select></div>
         <div class="full"><label for="pn">Practice name *</label><input id="pn" required></div>
         <div><label for="cn">Contact name *</label><input id="cn" required></div>
         <div><label for="cr">Credentials *</label><select id="cr" required><option value="">Select…</option><option>MD</option><option>DO</option><option>NP</option><option>PA</option><option>ND (where licensed)</option><option>Pharmacist / Pharmacy</option><option>Other licensed professional</option></select></div>
@@ -578,10 +579,11 @@ footer h4{color:var(--navy)}footer a:hover{color:#0b74c6}
         <div><label for="ph">Phone *</label><input id="ph" type="tel" required></div>
         <div class="full"><label for="addr">Practice address *</label><input id="addr" required></div>
         <div class="full"><label for="int">Products of interest</label><textarea id="int" placeholder="e.g. BPC-157, GHK-Cu, GLOW; regenerative partner introductions"></textarea></div>
+        <div class="full" id="ordwrap" style="display:none"><label for="ordtxt">Order request *</label><textarea id="ordtxt" placeholder="Products and quantities, e.g. BPC-157 pens × 10, GHK-Cu pens × 5. Include any delivery notes. We'll confirm pricing, availability and your practice details before anything is processed."></textarea></div>
         <div class="full"><label class="chk"><input type="checkbox" required> I confirm I am a licensed healthcare professional (or authorized on behalf of one) and that products will be used only in accordance with applicable federal and state law.</label></div>
-        <div class="full"><button class="btn btn-primary" type="submit" style="width:100%">Submit my Cape Edge application</button></div>
+        <div class="full"><button class="btn btn-primary" type="submit" style="width:100%">Submit to Cape Edge</button></div>
       </div>
-      <div class="ok" id="ok">Thank you. Your application has been received and our team will be in touch after credential verification. (Demo form, not yet connected to a backend.)</div>
+      <div class="ok" id="ok">Thank you. Your request has been received. We'll be in touch to verify your credentials and confirm any order details before processing. (Demo form, not yet connected to a backend.)</div>
     </form>
   </div>
 </section>
@@ -598,6 +600,7 @@ footer h4{color:var(--navy)}footer a:hover{color:#0b74c6}
     <details><summary>Are these products FDA-approved?</summary><p>No. None of the featured peptides is an FDA-approved drug product, and their regulatory status differs by compound (see each catalog card). Practitioners are responsible for determining whether and how any product may be lawfully used in their practice and state.</p></details>
     <details><summary>Can we get Cape Edge private-label pens?</summary><p>Private-label Cape Edge pens may be available on request for qualifying practice volumes, subject to supplier approval and applicable regulatory requirements. Pens are distributed by Cape Edge; ask us about labeling options for your practice.</p></details>
     <details><summary>Do you provide dosing protocols?</summary><p>No. Cape Edge provides product specifications, documentation and device-handling guidance only. Clinical decisions remain with the licensed practitioner.</p></details>
+    <details><summary>How does ordering work?</summary><p>Practices order through Cape Edge, not directly from the manufacturer. Once your account is approved, send an order request with products and quantities. We confirm pricing, availability and your practice details, then process your order and ship it to your verified practice address, cold-chain packed. [Payment terms and minimums to be confirmed.]</p></details>
     <details><summary>How is shipping handled?</summary><p>Orders ship in insulated cold-chain packaging with tracking to the verified practice address. [Shipping times and minimums to be confirmed.]</p></details>
   </div>
 </section>
@@ -649,5 +652,6 @@ footer h4{color:var(--navy)}footer a:hover{color:#0b74c6}
     </div>
   </div>
 </footer>
+<script>document.querySelectorAll('a[data-req]').forEach(function(a){a.addEventListener('click',function(){var s=document.getElementById('rt');s.value=a.dataset.req;s.dispatchEvent(new Event('change'));});});</script>
 </body>
 </html>
