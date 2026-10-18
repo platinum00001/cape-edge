@@ -269,6 +269,7 @@ footer h4{color:var(--navy)}footer a:hover{color:#0b74c6}
 .hint{font-size:.76rem;color:var(--muted);margin-top:5px;display:block}
 .only-pen[hidden],.only-svc[hidden]{display:none!important}
 @media(max-width:1100px){.svc-grid{grid-template-columns:1fr 1fr}}@media(max-width:600px){.svc-grid{grid-template-columns:1fr}}
+.err{display:none;margin-top:16px;padding:14px;border-radius:10px;background:#fdecec;color:#8a1c1c;font-size:.9rem}
 </style>
 </head>
 <body>
@@ -613,7 +614,8 @@ footer h4{color:var(--navy)}footer a:hover{color:#0b74c6}
         <li>Services: pricing on request</li>
       </ul>
     </div>
-    <form id="lead" onsubmit="event.preventDefault();document.getElementById('lead-ok').style.display='block';this.reset();leadMode();">
+    <form id="lead">
+      <div aria-hidden="true" style="position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap"><label>Leave this field empty<input type="text" name="_honey" tabindex="-1" autocomplete="off"></label></div>
       <div class="fgrid">
         <div class="full"><label for="lt">I'm interested in *</label><select id="lt" required onchange="leadMode()"><optgroup label="Pens"><option value="pen">Pen order / quote</option></optgroup><optgroup label="Cape Edge Services"><option value="seminar">Peptide education seminars</option><option value="coaching">1:1 peptide coaching &amp; consulting</option><option value="course">Peptide practitioner training course</option><option value="training">Personal training, peptide-informed</option><option value="nutrition">Personal nutrition &amp; meal planning</option><option value="workshop">Corporate &amp; gym workshops</option><option value="cohort">Group coaching cohort</option></optgroup><optgroup label="Other"><option value="general">General question</option></optgroup></select></div>
         <div><label for="lname">Name *</label><input id="lname" autocomplete="name" required></div>
@@ -628,7 +630,8 @@ footer h4{color:var(--navy)}footer a:hover{color:#0b74c6}
         <div class="full only-svc" hidden><p class="hint" style="font-size:.85rem;margin:0">Information only. Consult a licensed medical provider. Services are education and coaching, not medical advice, diagnosis or prescribing. Pricing on request.</p></div>
         <div class="full"><button class="btn btn-primary" type="submit" style="width:100%">Send my request</button></div>
       </div>
-      <div class="ok" id="lead-ok">Thank you. Your request has been received. We'll review it and reply with pricing and next steps. Nothing has been charged. (Demo form, not yet connected to a backend.)</div>
+      <div class="ok" id="lead-ok">Thank you. Your request has been received. We'll review it and reply with pricing and next steps. Nothing has been charged.</div>
+      <div class="err" id="lead-err" role="alert"></div>
     </form>
   </div>
 </section>
@@ -648,7 +651,8 @@ footer h4{color:var(--navy)}footer a:hover{color:#0b74c6}
         <li>Dedicated account contact</li>
       </ul>
     </div>
-    <form id="acct" onsubmit="event.preventDefault();document.getElementById('ok').style.display='block';this.reset();">
+    <form id="acct">
+      <div aria-hidden="true" style="position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap"><label>Leave this field empty<input type="text" name="_honey" tabindex="-1" autocomplete="off"></label></div>
       <div class="fgrid">
         <div class="full"><label for="pn">Practice name *</label><input id="pn" required></div>
         <div><label for="cn">Contact name *</label><input id="cn" required></div>
@@ -661,10 +665,11 @@ footer h4{color:var(--navy)}footer a:hover{color:#0b74c6}
         <div><label for="ph">Phone *</label><input id="ph" type="tel" required></div>
         <div class="full"><label for="addr">Practice address *</label><input id="addr" required></div>
         <div class="full"><label for="int">Products of interest</label><textarea id="int" placeholder="e.g. BPC-157, GHK-Cu, GLOW; regenerative partner introductions"></textarea></div>
-        <div class="full"><label class="chk"><input type="checkbox" required> I confirm I am a licensed healthcare professional (or authorized on behalf of one) and that products will be used only in accordance with applicable federal and state law.</label></div>
+        <div class="full"><label class="chk"><input type="checkbox" id="attest" required> I confirm I am a licensed healthcare professional (or authorized on behalf of one) and that products will be used only in accordance with applicable federal and state law.</label></div>
         <div class="full"><button class="btn btn-primary" type="submit" style="width:100%">Submit my account application</button></div>
       </div>
-      <div class="ok" id="ok">Thank you. Your application has been received and we'll be in touch after credential verification. (Demo form, not yet connected to a backend.)</div>
+      <div class="ok" id="ok">Thank you. Your application has been received and we'll be in touch after credential verification.</div>
+      <div class="err" id="err" role="alert"></div>
     </form>
   </div>
 </section>
@@ -741,7 +746,36 @@ document.querySelectorAll('#lead .only-svc').forEach(function(e){e.hidden=pen});
 document.getElementById('lprac').required=pen;document.getElementById('lprod').required=pen;
 var q=document.getElementById('lqty');q.required=pen;q.min=pen?10:'';}
 document.querySelectorAll('a[data-lead]').forEach(function(a){a.addEventListener('click',function(){document.getElementById('lt').value=a.dataset.lead;leadMode();if(a.dataset.prod)document.getElementById('lprod').value=a.dataset.prod;});});
+var FS_URL='https://formsubmit.co/ajax/edgecima@gmail.com';
+function val(id){var e=document.getElementById(id);return e?(e.value||'').trim():'';}
+function sendForm(form,payload,okId,errId){
+  var ok=document.getElementById(okId),err=document.getElementById(errId),btn=form.querySelector('button[type=submit]'),label=btn.textContent;
+  ok.style.display='none';err.style.display='none';
+  if(form.querySelector('[name=_honey]').value){ok.style.display='block';form.reset();return;}
+  payload._template='table';payload._captcha='false';payload._honey='';payload['Page']=location.href;
+  btn.disabled=true;btn.textContent='Sending…';
+  fetch(FS_URL,{method:'POST',headers:{'Content-Type':'application/json','Accept':'application/json'},body:JSON.stringify(payload)})
+  .then(function(r){return r.json().catch(function(){return {};}).then(function(j){if(!r.ok||String(j.success)!=='true')throw new Error(j.message||('HTTP '+r.status));});})
+  .then(function(){ok.style.display='block';form.reset();if(form.id==='lead')leadMode();})
+  .catch(function(){err.innerHTML='Sorry, we couldn\'t send your request just now. Please try again in a moment, or email us at <a href="mailto:edgecima@gmail.com">edgecima@gmail.com</a>.';err.style.display='block';})
+  .then(function(){btn.disabled=false;btn.textContent=label;});
+}
+document.getElementById('lead').addEventListener('submit',function(e){
+  e.preventDefault();if(!this.checkValidity()){this.reportValidity();return;}
+  var sel=document.getElementById('lt'),type=sel.options[sel.selectedIndex].text,pen=sel.value==='pen';
+  if(pen&&(parseInt(val('lqty'),10)||0)<10){var q=document.getElementById('lqty');q.setCustomValidity('Minimum order 10 pens.');q.reportValidity();q.setCustomValidity('');return;}
+  var p={_subject:'Cape Edge \u2014 Quote/booking request: '+type,'Request type':type,'Name':val('lname'),'Email':val('lemail'),'Phone':val('lphone'),'Practice / organization':val('lprac'),'Ship-to / location (state, country)':val('lloc')};
+  if(pen){p['Product']=val('lprod');p['Quantity (pens)']=val('lqty');}
+  p['Notes']=val('lnotes');p._replyto=val('lemail');
+  sendForm(this,p,'lead-ok','lead-err');
+});
+document.getElementById('acct').addEventListener('submit',function(e){
+  e.preventDefault();if(!this.checkValidity()){this.reportValidity();return;}
+  var p={_subject:'Cape Edge \u2014 New account application','Practice name':val('pn'),'Contact name':val('cn'),'Credentials':val('cr'),'NPI':val('npi'),'State license # & state':val('lic'),'Specialty':val('sp'),'Est. monthly volume':val('vol'),'Email':val('em'),'Phone':val('ph'),'Practice address':val('addr'),'Products of interest':val('int'),'Licensed-professional attestation':document.getElementById('attest').checked?'Confirmed':'Not confirmed',_replyto:val('em')};
+  sendForm(this,p,'ok','err');
+});
 leadMode();
 </script>
+
 </body>
 </html>
