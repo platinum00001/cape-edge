@@ -270,6 +270,18 @@ footer h4{color:var(--navy)}footer a:hover{color:#0b74c6}
 .only-pen[hidden],.only-svc[hidden]{display:none!important}
 @media(max-width:1100px){.svc-grid{grid-template-columns:1fr 1fr}}@media(max-width:600px){.svc-grid{grid-template-columns:1fr}}
 .err{display:none;margin-top:16px;padding:14px;border-radius:10px;background:#fdecec;color:#8a1c1c;font-size:.9rem}
+.price-tag{display:flex;align-items:baseline;gap:8px;border-top:1px solid #e6eef4;padding-top:10px;margin-top:4px}
+.price-tag b{font-family:'Cormorant Garamond',Georgia,serif;font-size:1.9rem;color:#0a2540;line-height:1}
+.price-tag span{font-size:.8rem;color:#4f6475}
+.svc-ask{font-size:.86rem;font-weight:600;color:#0b74c6;text-align:center;text-decoration:none;padding:4px 0}
+.svc-ask:hover{text-decoration:underline}
+.paid-note{font-size:.72rem;color:#5d7283;line-height:1.4;border-top:1px dashed #dcebf5;padding-top:8px}
+.svc-cta{display:flex;flex-wrap:wrap;align-items:center;gap:14px;margin-top:20px}
+.svc-cta span{font-size:.82rem;color:#4f6475}
+.hero-consult{margin-top:16px;font-size:.92rem;color:#2c4457}
+.hero-consult a{color:#0b74c6;font-weight:700;text-decoration:none}
+.hero-consult a:hover{text-decoration:underline}
+.svc.paid{border:2px solid #9fd4ec}
 </style>
 </head>
 <body>
@@ -330,6 +342,7 @@ footer h4{color:var(--navy)}footer a:hover{color:#0b74c6}
         <a class="btn btn-primary" href="#apply">Apply for a Cape Edge clinical account</a>
         <a class="btn btn-ghost" href="#pen">See how the pen works</a>
       </div>
+      <p class="hero-consult">New: 1:1 peptide education. <a href="#pay-consult" data-pay-link="" data-svc="coaching">Book a $500 consultation →</a></p>
       <div class="hero-points">
         <div><b>0</b><span>reconstitution steps</span></div>
         <div><b>12 mo</b><span>unopened shelf life, per supplier</span></div>
@@ -583,11 +596,12 @@ footer h4{color:var(--navy)}footer a:hover{color:#0b74c6}
       <span class="eyebrow">Cape Edge Services</span>
       <h2>Peptide education &amp; coaching</h2>
       <p class="lead">Beyond the pen program, Cape Edge offers education and coaching for individuals, professionals and organizations. These services are led by James Sweet, who brings a background in recovery coaching, counseling and business to clear, practical peptide education.</p>
+      <div class="svc-cta"><a class="btn btn-primary" href="#pay-consult" data-pay-link="" data-svc="coaching">Book a $500 consultation</a><span>1:1 · education and coaching only, not medical advice</span></div>
       <div class="creds"><span>Certified Recovery Coach</span><span>Certified Recovery Coach Supervisor</span><span>LADC II (Massachusetts)</span><span>MBA</span><span>BA, Psychology</span></div>
     </div>
     <div class="svc-grid">
-    <div class="svc"><div class="ic"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#0b74c6" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="12" rx="2"/><path d="M8 20h8M12 16v4"/></svg></div><h3>Peptide education seminars</h3><span class="fmt">Group &amp; community · in person or virtual</span><p>Plain-language sessions on what peptides are, how pre-filled pens work, current U.S. regulatory status and the questions to bring to your own medical provider.</p><span class="pr">Pricing on request</span><a class="btn btn-outline" href="#quote" data-lead="seminar">Request / Book</a></div>
-    <div class="svc"><div class="ic"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#0b74c6" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="9" cy="8" r="3.5"/><path d="M2.5 20c.8-3.6 3.4-5.5 6.5-5.5s5.7 1.9 6.5 5.5"/><path d="M16 4.5a3.5 3.5 0 0 1 0 7M18 14.8c1.9.7 3.1 2.4 3.5 5.2"/></svg></div><h3>1:1 peptide coaching &amp; consulting</h3><span class="fmt">Intro call, then a monthly package</span><p>One-to-one education and coaching to help you understand the landscape, organize your questions and prepare for conversations with a licensed medical provider.</p><span class="pr">Pricing on request</span><a class="btn btn-outline" href="#quote" data-lead="coaching">Request / Book</a></div>
+    <div class="svc paid"><div class="ic"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#0b74c6" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="9" cy="8" r="3.5"/><path d="M2.5 20c.8-3.6 3.4-5.5 6.5-5.5s5.7 1.9 6.5 5.5"/><path d="M16 4.5a3.5 3.5 0 0 1 0 7M18 14.8c1.9.7 3.1 2.4 3.5 5.2"/></svg></div><h3>1:1 Peptide Consultation</h3><span class="fmt">Book a session with a Cape Edge consultant</span><p>One-to-one education and coaching to help you understand the landscape, organize your questions and prepare for conversations with a licensed medical provider.</p><div class="price-tag"><b>$500</b><span>per consultation</span></div><a class="btn btn-primary" href="#pay-consult" data-pay-link="" data-svc="coaching">Book &amp; pay</a><a class="svc-ask" href="#quote" data-lead="coaching">Ask a question →</a><span class="paid-note">Education and coaching only; not medical advice. Rescheduling/refund terms: [TBD].</span></div>
+    <div class="svc paid"><div class="ic"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#0b74c6" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="12" rx="2"/><path d="M8 20h8M12 16v4"/></svg></div><h3>Peptide Education Seminar</h3><span class="fmt">Group &amp; community · in person or virtual</span><p>Plain-language sessions on what peptides are, how pre-filled pens work, current U.S. regulatory status and the questions to bring to your own medical provider.</p><div class="price-tag"><b>$5,000</b><span>per seminar</span></div><a class="btn btn-primary" href="#pay-seminar" data-pay-link="" data-svc="seminar">Book &amp; pay</a><a class="svc-ask" href="#quote" data-lead="seminar">Ask a question →</a><span class="paid-note">Education and coaching only; not medical advice. Rescheduling/refund terms: [TBD].</span></div>
     <div class="svc"><div class="ic"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#0b74c6" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M2 9l10-5 10 5-10 5z"/><path d="M6 11v5c3 2.5 9 2.5 12 0v-5"/></svg></div><h3>Peptide practitioner training course</h3><span class="fmt">For coaches, trainers &amp; wellness professionals</span><p>Structured education on peptide fundamentals, regulation, pen handling and scope of practice. Participants receive a Cape Edge certificate of completion. This is not an accredited, licensing or board certification.</p><span class="pr">Pricing on request</span><a class="btn btn-outline" href="#quote" data-lead="course">Request / Book</a></div>
     <div class="svc"><div class="ic"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#0b74c6" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M6 8v8M18 8v8M3 10v4M21 10v4M6 12h12"/></svg></div><h3>Personal training, peptide-informed</h3><span class="fmt">Individual programming</span><p>Strength and conditioning programming built around your goals and schedule, with education on how peptides fit the wider wellness conversation. It is not a substitute for medical care.</p><span class="pr">Pricing on request</span><a class="btn btn-outline" href="#quote" data-lead="training">Request / Book</a></div>
     <div class="svc"><div class="ic"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#0b74c6" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 21c-4.5 0-8-3.4-8-8 0-3 2-5 4.5-5 1.4 0 2.5.6 3.5 1.5C13 8.6 14.1 8 15.5 8 18 8 20 10 20 13c0 4.6-3.5 8-8 8z"/><path d="M12 9.5c0-3 1.5-5 4-6"/></svg></div><h3>Personal nutrition &amp; meal planning</h3><span class="fmt">Coaching &amp; practical planning</span><p>Practical meal-planning and habit coaching around everyday nutrition. General wellness education only; not medical nutrition therapy and not intended for any medical condition.</p><span class="pr">Pricing on request</span><a class="btn btn-outline" href="#quote" data-lead="nutrition">Request / Book</a></div>
@@ -617,7 +631,7 @@ footer h4{color:var(--navy)}footer a:hover{color:#0b74c6}
     <form id="lead">
       <div aria-hidden="true" style="position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap"><label>Leave this field empty<input type="text" name="_honey" tabindex="-1" autocomplete="off"></label></div>
       <div class="fgrid">
-        <div class="full"><label for="lt">I'm interested in *</label><select id="lt" required onchange="leadMode()"><optgroup label="Pens"><option value="pen">Pen order / quote</option></optgroup><optgroup label="Cape Edge Services"><option value="seminar">Peptide education seminars</option><option value="coaching">1:1 peptide coaching &amp; consulting</option><option value="course">Peptide practitioner training course</option><option value="training">Personal training, peptide-informed</option><option value="nutrition">Personal nutrition &amp; meal planning</option><option value="workshop">Corporate &amp; gym workshops</option><option value="cohort">Group coaching cohort</option></optgroup><optgroup label="Other"><option value="general">General question</option></optgroup></select></div>
+        <div class="full"><label for="lt">I'm interested in *</label><select id="lt" required onchange="leadMode()"><optgroup label="Pens"><option value="pen">Pen order / quote</option></optgroup><optgroup label="Cape Edge Services"><option value="seminar">Peptide Education Seminar ($5,000)</option><option value="coaching">1:1 Peptide Consultation ($500)</option><option value="course">Peptide practitioner training course</option><option value="training">Personal training, peptide-informed</option><option value="nutrition">Personal nutrition &amp; meal planning</option><option value="workshop">Corporate &amp; gym workshops</option><option value="cohort">Group coaching cohort</option></optgroup><optgroup label="Other"><option value="general">General question</option></optgroup></select></div>
         <div><label for="lname">Name *</label><input id="lname" autocomplete="name" required></div>
         <div><label for="lemail">Email *</label><input id="lemail" type="email" autocomplete="email" required></div>
         <div><label for="lphone">Phone *</label><input id="lphone" type="tel" autocomplete="tel" required></div>
@@ -774,6 +788,7 @@ document.getElementById('acct').addEventListener('submit',function(e){
   var p={_subject:'Cape Edge \u2014 New account application','Practice name':val('pn'),'Contact name':val('cn'),'Credentials':val('cr'),'NPI':val('npi'),'State license # & state':val('lic'),'Specialty':val('sp'),'Est. monthly volume':val('vol'),'Email':val('em'),'Phone':val('ph'),'Practice address':val('addr'),'Products of interest':val('int'),'Licensed-professional attestation':document.getElementById('attest').checked?'Confirmed':'Not confirmed',_replyto:val('em')};
   sendForm(this,p,'ok','err');
 });
+document.querySelectorAll('a[data-pay-link]').forEach(function(a){a.addEventListener('click',function(e){var u=(a.getAttribute('data-pay-link')||'').trim();if(u){e.preventDefault();window.location.href=u;return;}e.preventDefault();document.getElementById('lt').value=a.dataset.svc;leadMode();document.getElementById('quote').scrollIntoView({behavior:'smooth'});history.replaceState(null,'','#quote');});});
 leadMode();
 </script>
 
