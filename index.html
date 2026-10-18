@@ -6,6 +6,10 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Cape Edge | Pre-Filled Peptide Pens for Licensed Practices</title>
 <meta name="description" content="Cape Edge supplies European-manufactured, pre-filled multi-dose peptide pens to licensed clinicians and practices. Wholesale accounts by application.">
+<link rel="icon" href="img/brand/favicon.svg" type="image/svg+xml">
+<link rel="icon" href="img/brand/favicon-32.png" sizes="32x32" type="image/png">
+<link rel="apple-touch-icon" href="img/brand/apple-touch-icon.png">
+<meta name="theme-color" content="#0b74c6">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
@@ -188,25 +192,97 @@ footer ul{list-style:none}footer li{margin-bottom:8px}footer a{text-decoration:n
 .disc{border-top:1px solid rgba(255,255,255,.1);padding-top:28px;font-size:.76rem;line-height:1.7;color:rgba(255,255,255,.55)}
 .disc p{margin-bottom:10px}
 @media(max-width:800px){.foot{grid-template-columns:1fr}}
+
+/* ===== Bright & lively Cape Edge theme ===== */
+.nav ul{gap:22px}.nav ul a{white-space:nowrap;font-size:.86rem}.nav-cta{white-space:nowrap}
+@media(max-width:1100px){.nav ul{display:none}}
+:root{--navy:#0a2540;--brass:#0b74c6;--sea:#2bb3d1;--sea-l:#d9f2fa;--sand:#f2f9fd;--line:rgba(11,116,198,.14);--shadow:0 14px 34px rgba(11,116,198,.12)}
+body{background:#fff}
+.btn{transition:transform .15s,box-shadow .15s,background .15s}
+.btn-primary{background:linear-gradient(135deg,#0b74c6,#0a68b4);color:#fff;box-shadow:0 8px 20px rgba(11,116,198,.30)}
+.btn-primary:hover{transform:translateY(-2px);box-shadow:0 12px 26px rgba(11,116,198,.38);background:linear-gradient(135deg,#0a68b4,#095c9f)}
+.btn-ghost,.btn-outline{border-color:#0b74c6;color:#0b74c6;background:#fff}
+.btn-ghost:hover,.btn-outline:hover{background:#eaf5fd}
+header{background:rgba(255,255,255,.94);border-bottom:1px solid var(--line);box-shadow:0 2px 14px rgba(11,116,198,.06)}
+.nav ul a{color:#24425f}.nav ul a:hover{color:#0b74c6}
+.logo svg{display:block}
+.hero{background:radial-gradient(900px 500px at 85% 0%,#fff6dc 0%,rgba(255,246,220,0) 55%),radial-gradient(1000px 600px at 10% 100%,#c9eef8 0%,rgba(201,238,248,0) 60%),linear-gradient(180deg,#e3f3fc 0%,#f7fcff 100%);color:var(--ink)}
+.hero h1{color:var(--navy)}.hero h1 em{color:#0b74c6}
+.hero p.lead{color:#3c566d}
+.hero .eyebrow{color:#0b74c6}
+.hero-points div{border-left-color:#2bb3d1}.hero-points b{color:var(--navy)}.hero-points span{color:#4f6475}
+.hero-art img{box-shadow:0 26px 50px rgba(11,116,198,.22);border:1px solid rgba(11,116,198,.15)}
+.img-cap{color:#4f6475}
+.badge{display:inline-flex;align-items:center;gap:8px;background:#fff;border:1px solid rgba(11,116,198,.2);color:#0b74c6;font-weight:600;font-size:.8rem;padding:6px 14px 6px 8px;border-radius:999px;margin-bottom:16px;box-shadow:0 4px 12px rgba(11,116,198,.10)}
+.waves path{fill:#f2f9fd}
+.strip{background:#f2f9fd}.strip div:before{background:#2bb3d1}
+.step .num{background:linear-gradient(135deg,#0b74c6,#2bb3d1)}
+.compare thead th{background:#e3f1fb;color:var(--navy);font-weight:600}
+.compare thead th:nth-child(2){background:#0b74c6;color:#fff}
+.compare tbody tr:nth-child(even){background:#f5fafd}
+.dark{background:linear-gradient(180deg,#e6f6fb 0%,#f4fbff 100%);color:var(--ink)}
+.dark h2,.dark h3{color:var(--navy)}.dark .lead{color:#3c566d}
+.hero .eyebrow,.dark .eyebrow{color:#0b74c6}
+.stat{background:#fff;border:1px solid var(--line);box-shadow:var(--shadow)}
+.stat b{color:#0b74c6}.stat h4{color:var(--navy)}.stat p{color:#4f6475}
+.dark .pps{background:rgba(11,116,198,.10);color:#0b74c6}
+.timeline{background:#fff;border:1px solid var(--line)}
+.bar div:first-child{background:linear-gradient(90deg,#2bb3d1,#0b74c6)}.bar div:last-child{background:#7fd3e6}
+.bar-l{color:#4f6475}.note{color:#5d7386}
+.card .ic{background:linear-gradient(135deg,#d9f2fa,#e8f4fd)}
+.bg-sand{background:#f2f9fd}
+.regen{background:linear-gradient(120deg,#e3f6fb 0%,#f5fbff 100%)}
+.doc{background:#f5fafd}
+#faq.bg-sand{background:#f2f9fd}
+footer{background:linear-gradient(180deg,#eaf6fd,#dcefFa);color:#3c566d;border-top:1px solid var(--line)}
+footer h4{color:var(--navy)}footer a:hover{color:#0b74c6}
+.disc{border-top:1px solid var(--line);color:#4f6475}
+.story{background:#fff}
+.story-points{display:flex;gap:28px;margin-top:26px;flex-wrap:wrap}
+.story-points div{border-left:3px solid #2bb3d1;padding-left:12px}
+.story-points b{display:block;font-family:"Cormorant Garamond",serif;font-size:1.5rem;color:var(--navy)}
+.story-points span{font-size:.8rem;color:#4f6475}
+.order{background:linear-gradient(135deg,#0b74c6 0%,#1597d1 60%,#2bb3d1 100%);color:#fff}
+.order h2,.order .eyebrow{color:#fff}.order .lead{color:rgba(255,255,255,.9)}
+.order-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:22px;margin-top:44px}
+.order-card{background:#fff;color:var(--ink);border-radius:var(--r);padding:30px 26px;box-shadow:0 18px 40px rgba(6,60,110,.25);display:flex;flex-direction:column;gap:10px}
+.order-card h3{font-size:1.45rem}.order-card p{color:#4f6475;font-size:.93rem;flex:1}
+.order-card .btn{text-align:center;margin-top:6px}
+.step-n{width:34px;height:34px;border-radius:50%;display:grid;place-items:center;background:#d9f2fa;color:#0b74c6;font-weight:700}
+@media(max-width:900px){.order-grid{grid-template-columns:1fr}}
 </style>
 </head>
 <body>
 
 <header>
   <div class="wrap nav">
-    <a class="logo" href="#top" aria-label="Cape Edge home">
-      <svg width="36" height="36" viewBox="0 0 40 40" aria-hidden="true"><circle cx="20" cy="20" r="19" fill="none" stroke="#1f6fae" stroke-width="1.5"/><path d="M17 9h6l1.5 17h-9z" fill="#fff"/><rect x="16.5" y="7" width="7" height="3" rx="1" fill="#1f6fae"/><path d="M5 29c4-3 8-3 12 0s8 3 12 0 6-2 6-2" stroke="#5fb3cf" stroke-width="2" fill="none"/></svg>
-      <div><span>CAPE EDGE</span><small>Clinical Peptide Supply</small></div>
-    </a>
+    <a class="logo" href="#top" aria-label="Cape Edge home"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 360 80" width="216" height="48" role="img" aria-label="Cape Edge, Clinical Peptide Supply">
+<g transform="translate(4 8)"><g>
+<polygon points="36.5,13.5 62,7 62,20" fill="#5fb3cf" opacity=".55"/>
+<polygon points="27.5,13.5 2,7 2,20" fill="#5fb3cf" opacity=".3"/>
+<polygon points="26.5,11 32,5.5 37.5,11" fill="#0a2540"/>
+<rect x="28" y="11" width="8" height="6.5" rx="1" fill="#9fd4ec"/>
+<rect x="26" y="17.5" width="12" height="2.2" rx=".6" fill="#0a2540"/>
+<polygon points="28.2,19.7 35.8,19.7 38.8,45 25.2,45" fill="#0a2540"/>
+<polygon points="27.1,29 36.9,29 37.6,34.5 26.4,34.5" fill="#1f6fae"/>
+<path d="M2 47.5 C14 43.5 22 45 32 45 C42 45 50 43.5 62 46.5 L62 49.5 C50 46.8 42 48.4 32 48.4 C22 48.4 14 47 2 51 Z" fill="#0a2540"/>
+<path d="M4 55.5 c5.3 -3.6 10.7 -3.6 16 0 s10.7 3.6 16 0 s10.7 -3.6 16 0 c3 2 5.6 2.2 8 1.4" stroke="#1f6fae" stroke-width="2.6" fill="none" stroke-linecap="round"/>
+<path d="M10 61 c4.6 -3 9.4 -3 14 0 s9.4 3 14 0 s9.4 -3 14 0" stroke="#5fb3cf" stroke-width="2.2" fill="none" stroke-linecap="round"/>
+</g></g>
+<text x="84" y="46" font-family="'Cormorant Garamond',Georgia,serif" font-weight="700" font-size="38" letter-spacing="3.5" fill="#0a2540">CAPE EDGE</text>
+<rect x="85" y="55" width="22" height="1.6" fill="#5fb3cf"/>
+<text x="113" y="60" font-family="Inter,Helvetica,Arial,sans-serif" font-weight="600" font-size="9.2" letter-spacing="2.6" fill="#1f6fae">CLINICAL PEPTIDE SUPPLY</text>
+</svg></a>
     <ul>
-      <li><a href="#pen">How the pen works</a></li>
-      <li><a href="#stability">Built to last</a></li>
+      <li><a href="#pen">The pen</a></li>
+      <li><a href="#stability">Stability</a></li>
       <li><a href="#catalog">Catalog</a></li>
-      <li><a href="#quality">Quality</a></li>
-      <li><a href="#regenerative">Regenerative partners</a></li>
+      <li><a href="#story">Our story</a></li>
+      <li><a href="#regenerative">Partners</a></li>
+      <li><a href="#order">Order</a></li>
       <li><a href="#faq">FAQ</a></li>
     </ul>
-    <a class="btn btn-primary" href="#apply">Open an account</a>
+    <a class="btn btn-primary nav-cta" href="#apply">Become a partner</a>
   </div>
 </header>
 
@@ -215,11 +291,23 @@ footer ul{list-style:none}footer li{margin-bottom:8px}footer a{text-decoration:n
 <section class="hero">
   <div class="wrap hero-grid">
     <div>
+      <span class="badge"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" width="22" height="22" aria-hidden="true"><g>
+<polygon points="36.5,13.5 62,7 62,20" fill="#5fb3cf" opacity=".55"/>
+<polygon points="27.5,13.5 2,7 2,20" fill="#5fb3cf" opacity=".3"/>
+<polygon points="26.5,11 32,5.5 37.5,11" fill="#0a2540"/>
+<rect x="28" y="11" width="8" height="6.5" rx="1" fill="#9fd4ec"/>
+<rect x="26" y="17.5" width="12" height="2.2" rx=".6" fill="#0a2540"/>
+<polygon points="28.2,19.7 35.8,19.7 38.8,45 25.2,45" fill="#0a2540"/>
+<polygon points="27.1,29 36.9,29 37.6,34.5 26.4,34.5" fill="#1f6fae"/>
+<path d="M2 47.5 C14 43.5 22 45 32 45 C42 45 50 43.5 62 46.5 L62 49.5 C50 46.8 42 48.4 32 48.4 C22 48.4 14 47 2 51 Z" fill="#0a2540"/>
+<path d="M4 55.5 c5.3 -3.6 10.7 -3.6 16 0 s10.7 3.6 16 0 s10.7 -3.6 16 0 c3 2 5.6 2.2 8 1.4" stroke="#1f6fae" stroke-width="2.6" fill="none" stroke-linecap="round"/>
+<path d="M10 61 c4.6 -3 9.4 -3 14 0 s9.4 3 14 0 s9.4 -3 14 0" stroke="#5fb3cf" stroke-width="2.2" fill="none" stroke-linecap="round"/>
+</g></svg>The Cape Edge Pen Program</span>
       <span class="eyebrow">For licensed clinicians &amp; practices</span>
       <h1>The pre-filled peptide pen.<br><em>Dial. Click. Done.</em></h1>
       <p class="lead">Cape Edge supplies European-manufactured, multi-dose peptide pens to practices. Each pen arrives pre-filled and sealed, so there's no vial to reconstitute, no syringe to draw up, and a 12-month unopened shelf life <span class="pps">per RBT</span>.</p>
       <div class="ctas">
-        <a class="btn btn-primary" href="#apply">Apply for a wholesale account</a>
+        <a class="btn btn-primary" href="#apply">Apply for a Cape Edge clinical account</a>
         <a class="btn btn-ghost" href="#pen">See how the pen works</a>
       </div>
       <div class="hero-points">
@@ -228,7 +316,7 @@ footer ul{list-style:none}footer li{margin-bottom:8px}footer a{text-decoration:n
         <div><b>EU</b><span>GMP manufacturing, per RBT</span></div>
       </div>
     </div>
-    <div class="hero-art"><img src="img/hero-pen-studio.webp" width="1600" height="900" alt="Reverse Body Time ready-to-use peptide pen on a blue studio surface" fetchpriority="high"><span class="img-cap">Ready-to-use pen manufactured by Reverse Body Time</span></div>
+    <div class="hero-art"><img src="img/hero-pen-studio.webp" width="1600" height="900" alt="Reverse Body Time pre-filled pen beside a Cape Edge program carton" fetchpriority="high"><span class="img-cap">Pen manufactured by Reverse Body Time; distributed by Cape Edge.</span></div>
   </div>
   <svg class="waves" viewBox="0 0 1440 90" preserveAspectRatio="none" height="90"><path d="M0 50 C240 90 480 10 720 40 S1200 90 1440 40 V90 H0Z" fill="#f4f2ed"/><path d="M0 70 C300 40 520 95 820 65 S1260 40 1440 70 V90 H0Z" fill="#f4f2ed" opacity=".6"/></svg>
 </section>
@@ -240,10 +328,10 @@ footer ul{list-style:none}footer li{margin-bottom:8px}footer a{text-decoration:n
 <!-- HOW THE PEN WORKS -->
 <section id="pen">
   <div class="wrap center">
-    <span class="eyebrow">How the pen works</span>
-    <h2>From fridge to administration in four steps</h2>
+    <span class="eyebrow">The Cape Edge Pen Program</span>
+    <h2>How the Cape Edge pen works, in four steps</h2>
     <p class="lead">The peptide is already in solution inside a sealed glass cartridge. A click-indexed dial moves the plunger a fixed distance per click, so the volume is set mechanically rather than read off a syringe.</p>
-    <figure class="pen-figure"><img src="img/pen-clinical-counter.webp" width="1280" height="720" alt="Reverse Body Time pre-filled pen on a clinic counter" loading="lazy"><figcaption>The sealed, pre-filled pen: no vials, no reconstitution. Pen manufactured by Reverse Body Time.</figcaption></figure>
+    <figure class="pen-figure"><img src="img/pen-clinical-counter.webp" width="1280" height="720" alt="Reverse Body Time pre-filled pen in a Cape Edge clinic tray" loading="lazy"><figcaption>The sealed, pre-filled pen: no vials, no reconstitution. Pen manufactured by Reverse Body Time; distributed by Cape Edge.</figcaption></figure>
   </div>
   <div class="wrap">
     <div class="steps">
@@ -281,7 +369,7 @@ footer ul{list-style:none}footer li{margin-bottom:8px}footer a{text-decoration:n
 <section id="stability" class="dark">
   <div class="wrap">
     <span class="eyebrow">Built to last</span>
-    <h2>Stability you can plan inventory around</h2>
+    <h2>Cape Edge stability you can plan inventory around</h2>
     <p class="lead">Our manufacturing partner, Reverse Body Time (RBT), supplies peptides as ready-to-use pens with buffered formulation and light-resistant packaging <span class="pps">per RBT</span>. That means less waste and simpler stock management for your practice. Figures below are as published by RBT; lot-specific expiry is printed on each carton and COA.</p>
     <div class="stab-grid">
       <div class="stat"><b>12 mo</b><h4>Unopened shelf life</h4><p>Ready-to-use pen, stored refrigerated as directed. <span class="pps">per RBT</span></p></div>
@@ -302,7 +390,7 @@ footer ul{list-style:none}footer li{margin-bottom:8px}footer a{text-decoration:n
 <section id="why">
   <div class="wrap center">
     <span class="eyebrow">Why Cape Edge</span>
-    <h2>A supply partner built for practices</h2>
+    <h2>Why practices choose Cape Edge</h2>
     <p class="lead">Based on Cape Cod, Massachusetts, we focus on one thing: dependable, documented pen-format supply for licensed professionals.</p>
   </div>
   <div class="wrap why-grid">
@@ -315,16 +403,30 @@ footer ul{list-style:none}footer li{margin-bottom:8px}footer a{text-decoration:n
   </div>
 </section>
 
+<!-- STORY -->
+<section id="story" class="story">
+  <div class="wrap two">
+    <div>
+      <span class="eyebrow">Our story</span>
+      <h2>Born on the Cape. Built for practices.</h2>
+      <p class="lead">Cape Edge started in Falmouth, on Cape Cod, where the land meets the Atlantic. The name is a nod to that coastline, and to the standard we hold ourselves to: no shortcuts, clear documentation, and real people who answer the phone.</p>
+      <p style="margin-top:16px;color:var(--muted)">We're a small Cape Cod team that came to this work from local business and community health. We built Cape Edge to give licensed practices a simpler, better-documented way to stock pre-filled pens, with the same care you'd expect from a neighbor.</p>
+      <div class="story-points"><div><b>Falmouth, MA</b><span>Home port</span></div><div><b>B2B only</b><span>Licensed practices</span></div><div><b>Lot-level</b><span>Documentation</span></div></div>
+    </div>
+    <figure class="pen-figure" style="margin:0"><img src="img/card-tb500.webp" width="960" height="540" alt="Cape Edge card and Reverse Body Time pen on Cape Cod sand with sea glass" loading="lazy"><figcaption>Pen manufactured by Reverse Body Time; distributed by Cape Edge.</figcaption></figure>
+  </div>
+</section>
+
 <!-- CATALOG -->
 <section id="catalog" class="bg-sand">
   <div class="wrap center">
     <span class="eyebrow">Practitioner catalog</span>
-    <h2>Featured pens</h2>
+    <h2>The Cape Edge pen catalog</h2>
     <p class="lead">Pricing is shown to approved accounts. Product information is provided for licensed professionals and describes format and specifications only. It does not describe a use.</p>
   </div>
   <div class="wrap cat-grid">
     <article class="prod">
-      <div class="prod-top"><span class="tag">Single compound</span><img src="img/card-bpc157.webp" width="960" height="540" alt="BPC-157: Reverse Body Time pre-filled pen" loading="lazy"></div>
+      <div class="prod-top"><span class="tag">Single compound</span><img src="img/card-bpc157.webp" width="960" height="540" alt="BPC-157: Reverse Body Time pre-filled pen, distributed by Cape Edge" loading="lazy"></div>
       <div class="prod-body">
         <h3>BPC-157</h3><p class="sub">Pentadecapeptide · pre-filled pen</p>
         <ul class="spec"><li><span>Format</span><span>Ready-to-use injectable pen <span class="pps">per RBT</span></span></li><li><span>Contents / volume</span><span>[mg · mL to be confirmed]</span></li><li><span>Purity</span><span>&gt;98% HPLC/MS <span class="pps">per RBT</span></span></li><li><span>Storage</span><span>Refrigerated, avoid freeze-thaw <span class="pps">per RBT</span></span></li><li><span>Unopened shelf life</span><span>12 months <span class="pps">per RBT</span></span></li><li><span>Pen tip</span><span>30–32G ultra-fine <span class="pps">per RBT</span></span></li></ul>
@@ -333,7 +435,7 @@ footer ul{list-style:none}footer li{margin-bottom:8px}footer a{text-decoration:n
       </div>
     </article>
     <article class="prod">
-      <div class="prod-top"><span class="tag">Single compound</span><img src="img/card-tb500.webp" width="960" height="540" alt="TB-500: Reverse Body Time pre-filled pen" loading="lazy"></div>
+      <div class="prod-top"><span class="tag">Single compound</span><img src="img/card-tb500.webp" width="960" height="540" alt="TB-500: Reverse Body Time pre-filled pen, distributed by Cape Edge" loading="lazy"></div>
       <div class="prod-body">
         <h3>TB-500</h3><p class="sub">Thymosin β4 fragment · pre-filled pen</p>
         <ul class="spec"><li><span>Format</span><span>Ready-to-use injectable pen <span class="pps">per RBT</span></span></li><li><span>Contents / volume</span><span>[mg · mL to be confirmed]</span></li><li><span>Purity</span><span>&gt;98% HPLC/MS <span class="pps">per RBT</span></span></li><li><span>Storage</span><span>Refrigerated, avoid freeze-thaw <span class="pps">per RBT</span></span></li><li><span>Unopened shelf life</span><span>12 months <span class="pps">per RBT</span></span></li><li><span>Pen tip</span><span>30–32G ultra-fine <span class="pps">per RBT</span></span></li></ul>
@@ -342,7 +444,7 @@ footer ul{list-style:none}footer li{margin-bottom:8px}footer a{text-decoration:n
       </div>
     </article>
     <article class="prod">
-      <div class="prod-top"><span class="tag">Blend</span><img src="img/card-tb500-bpc157.webp" width="960" height="540" alt="TB-500 + BPC-157: Reverse Body Time pre-filled pen" loading="lazy"></div>
+      <div class="prod-top"><span class="tag">Blend</span><img src="img/card-tb500-bpc157.webp" width="960" height="540" alt="TB-500 + BPC-157: Reverse Body Time pre-filled pen, distributed by Cape Edge" loading="lazy"></div>
       <div class="prod-body">
         <h3>TB-500 + BPC-157</h3><p class="sub">Two-peptide combination pen (RBT "TB500+BPC157 Combo")</p>
         <ul class="spec"><li><span>Format</span><span>Ready-to-use injectable pen <span class="pps">per RBT</span></span></li><li><span>Ratio / contents</span><span>[to be confirmed]</span></li><li><span>Purity</span><span>Lot COA on request <span class="pps">per RBT</span></span></li><li><span>Storage</span><span>Refrigerated, avoid freeze-thaw <span class="pps">per RBT</span></span></li><li><span>Unopened shelf life</span><span>12 months <span class="pps">per RBT</span></span></li><li><span>Pen tip</span><span>30–32G ultra-fine <span class="pps">per RBT</span></span></li></ul>
@@ -351,7 +453,7 @@ footer ul{list-style:none}footer li{margin-bottom:8px}footer a{text-decoration:n
       </div>
     </article>
     <article class="prod">
-      <div class="prod-top"><span class="tag">Single compound</span><img src="img/card-ghkcu.webp" width="960" height="540" alt="GHK-Cu: Reverse Body Time pre-filled pen" loading="lazy"></div>
+      <div class="prod-top"><span class="tag">Single compound</span><img src="img/card-ghkcu.webp" width="960" height="540" alt="GHK-Cu: Reverse Body Time pre-filled pen, distributed by Cape Edge" loading="lazy"></div>
       <div class="prod-body">
         <h3>GHK-Cu</h3><p class="sub">Copper tripeptide · pre-filled pen (RBT "Skin-glow")</p>
         <ul class="spec"><li><span>Format</span><span>Ready-to-use injectable pen <span class="pps">per RBT</span></span></li><li><span>Contents / volume</span><span>[mg · mL to be confirmed]</span></li><li><span>Purity</span><span>Lot COA on request <span class="pps">per RBT</span></span></li><li><span>Storage</span><span>Refrigerated, avoid freeze-thaw <span class="pps">per RBT</span></span></li><li><span>Unopened shelf life</span><span>12 months <span class="pps">per RBT</span></span></li><li><span>Pen tip</span><span>30–32G ultra-fine <span class="pps">per RBT</span></span></li></ul>
@@ -360,7 +462,7 @@ footer ul{list-style:none}footer li{margin-bottom:8px}footer a{text-decoration:n
       </div>
     </article>
     <article class="prod">
-      <div class="prod-top"><span class="tag">Custom blend</span><img src="img/card-glow.webp" width="960" height="540" alt="GLOW: Reverse Body Time pre-filled pen" loading="lazy"></div>
+      <div class="prod-top"><span class="tag">Custom blend</span><img src="img/card-glow.webp" width="960" height="540" alt="GLOW: Reverse Body Time pre-filled pen, distributed by Cape Edge" loading="lazy"></div>
       <div class="prod-body">
         <h3>GLOW</h3><p class="sub">BPC-157 + TB-500 + GHK-Cu · availability to be confirmed</p>
         <ul class="spec"><li><span>Status</span><span>Not a standard RBT catalog item</span></li><li><span>Typical formula</span><span>10 / 10 / 50 mg (industry convention)</span></li><li><span>Sourcing</span><span>Custom formulation on request <span class="pps">per RBT</span></span></li><li><span>Shelf life</span><span>[to be confirmed for blend]</span></li></ul>
@@ -369,7 +471,7 @@ footer ul{list-style:none}footer li{margin-bottom:8px}footer a{text-decoration:n
       </div>
     </article>
     <article class="prod">
-      <div class="prod-top"><span class="tag">Investigational</span><img src="img/card-retatrutide.webp" width="960" height="540" alt="Retatrutide: Reverse Body Time pre-filled pen" loading="lazy"></div>
+      <div class="prod-top"><span class="tag">Investigational</span><img src="img/card-retatrutide.webp" width="960" height="540" alt="Retatrutide: Reverse Body Time pre-filled pen, distributed by Cape Edge" loading="lazy"></div>
       <div class="prod-body">
         <h3>Retatrutide</h3><p class="sub">GIP / GLP-1 / glucagon receptor agonist · pre-filled pen (RBT "GLP3")</p>
         <ul class="spec"><li><span>Format</span><span>Ready-to-use injectable pen <span class="pps">per RBT</span></span></li><li><span>Contents / volume</span><span>[mg · mL to be confirmed]</span></li><li><span>Purity</span><span>Lot COA on request <span class="pps">per RBT</span></span></li><li><span>Storage</span><span>Refrigerated, avoid freeze-thaw <span class="pps">per RBT</span></span></li><li><span>Unopened shelf life</span><span>12 months <span class="pps">per RBT</span></span></li><li><span>Pen tip</span><span>30–32G ultra-fine <span class="pps">per RBT</span></span></li></ul>
@@ -385,7 +487,7 @@ footer ul{list-style:none}footer li{margin-bottom:8px}footer a{text-decoration:n
   <div class="wrap two">
     <div>
       <span class="eyebrow">Quality &amp; documentation</span>
-      <h2>Every lot, documented</h2>
+      <h2>Every Cape Edge lot, documented</h2>
       <p class="lead">We don't ask you to take quality on faith. Each shipment is traceable to a manufacturing lot with supporting analysis.</p>
       <ul class="checks">
         <li>Lot-specific Certificate of Analysis: identity (MS), purity (HPLC)</li>
@@ -416,7 +518,7 @@ footer ul{list-style:none}footer li{margin-bottom:8px}footer a{text-decoration:n
 <section id="regenerative" class="regen">
   <div class="wrap regen-box">
     <div>
-      <span class="eyebrow">Regenerative medicine partners</span>
+      <span class="eyebrow">Cape Edge Clinical Partners</span>
       <h2>Working with regenerative &amp; longevity practices</h2>
       <p class="lead">Many of our clinician partners run regenerative, orthopedic, aesthetic and longevity practices. We also help those practices connect with regenerative-product sources that operate within the applicable US framework.</p>
       <p style="margin-top:18px;color:var(--muted)">In the US, human cell and tissue products are regulated by FDA. Most stem-cell, exosome and similar products require FDA approval or an Investigational New Drug (IND) application before clinical use, unless they meet the narrow criteria of 21 CFR 1271.10 (minimal manipulation, homologous use). We only introduce partners who can provide documentation of their regulatory status, and we do not make claims about what any cell or tissue product treats.</p>
@@ -435,12 +537,26 @@ footer ul{list-style:none}footer li{margin-bottom:8px}footer a{text-decoration:n
   </div>
 </section>
 
+<!-- ORDER -->
+<section id="order" class="order">
+  <div class="wrap center">
+    <span class="eyebrow">Order with Cape Edge</span>
+    <h2>Simple ordering for approved practices</h2>
+    <p class="lead">Once your practice is verified, you'll get Cape Edge partner pricing and can order by invoice. No consumer checkout, no guesswork.</p>
+  </div>
+  <div class="wrap order-grid">
+    <div class="order-card"><span class="step-n">1</span><h3>Apply</h3><p>Submit your practice details, NPI and license for verification.</p><a class="btn btn-primary" href="#apply">Apply for a clinical account</a></div>
+    <div class="order-card"><span class="step-n">2</span><h3>Get partner pricing</h3><p>Receive your Cape Edge price sheet and volume tiers: [PRICE].</p><a class="btn btn-outline" href="#apply">Request partner pricing</a></div>
+    <div class="order-card"><span class="step-n">3</span><h3>Order &amp; pay by invoice</h3><p>Place your order and we'll send a practice invoice before cold-chain dispatch.</p><a class="btn btn-primary" href="#apply">Request a practice invoice</a></div>
+  </div>
+</section>
+
 <!-- APPLY -->
 <section id="apply">
   <div class="wrap form-wrap">
     <div>
-      <span class="eyebrow">For clinicians</span>
-      <h2>Open a practice account</h2>
+      <span class="eyebrow">Cape Edge Clinical Partners</span>
+      <h2>Become a Cape Edge Clinical Partner</h2>
       <p class="lead">Cape Edge sells only to licensed healthcare professionals and their practices. Tell us about your practice and we'll verify your credentials, usually within [2] business days.</p>
       <ul class="checks">
         <li>Practitioner pricing and volume tiers</li>
@@ -463,7 +579,7 @@ footer ul{list-style:none}footer li{margin-bottom:8px}footer a{text-decoration:n
         <div class="full"><label for="addr">Practice address *</label><input id="addr" required></div>
         <div class="full"><label for="int">Products of interest</label><textarea id="int" placeholder="e.g. BPC-157, GHK-Cu, GLOW; regenerative partner introductions"></textarea></div>
         <div class="full"><label class="chk"><input type="checkbox" required> I confirm I am a licensed healthcare professional (or authorized on behalf of one) and that products will be used only in accordance with applicable federal and state law.</label></div>
-        <div class="full"><button class="btn btn-primary" type="submit" style="width:100%">Submit application</button></div>
+        <div class="full"><button class="btn btn-primary" type="submit" style="width:100%">Submit my Cape Edge application</button></div>
       </div>
       <div class="ok" id="ok">Thank you. Your application has been received and our team will be in touch after credential verification. (Demo form, not yet connected to a backend.)</div>
     </form>
@@ -480,6 +596,7 @@ footer ul{list-style:none}footer li{margin-bottom:8px}footer a{text-decoration:n
     <details><summary>How should pens be stored?</summary><p>Keep refrigerated and avoid repeated freeze-thaw cycles (per RBT). Protect from light, remove the pen tip after every use and keep the cap on.</p></details>
     <details><summary>Where are the pens made?</summary><p>By Reverse Body Time (RBT), a European manufacturer. RBT states its peptides are made by solid-phase synthesis in GMP-certified, ISO-classified cleanrooms under ISO 9001 / ISO 13485. Facility documentation is available to account holders on request.</p></details>
     <details><summary>Are these products FDA-approved?</summary><p>No. None of the featured peptides is an FDA-approved drug product, and their regulatory status differs by compound (see each catalog card). Practitioners are responsible for determining whether and how any product may be lawfully used in their practice and state.</p></details>
+    <details><summary>Can we get Cape Edge private-label pens?</summary><p>Private-label Cape Edge pens may be available on request for qualifying practice volumes, subject to supplier approval and applicable regulatory requirements. Pens currently carry the manufacturer's (Reverse Body Time) labeling and are distributed by Cape Edge.</p></details>
     <details><summary>Do you provide dosing protocols?</summary><p>No. Cape Edge provides product specifications, documentation and device-handling guidance only. Clinical decisions remain with the licensed practitioner.</p></details>
     <details><summary>How is shipping handled?</summary><p>Orders ship in insulated cold-chain packaging with tracking to the verified practice address. [Shipping times and minimums to be confirmed.]</p></details>
   </div>
@@ -488,7 +605,7 @@ footer ul{list-style:none}footer li{margin-bottom:8px}footer a{text-decoration:n
 <!-- CONTACT -->
 <section id="contact">
   <div class="wrap center">
-    <span class="eyebrow">Contact</span><h2>Talk to the Cape Edge team</h2>
+    <span class="eyebrow">Contact</span><h2>Talk to the Cape Edge team in Falmouth</h2>
     <p class="lead">Questions about accounts, documentation or partnerships? We're based on Cape Cod and happy to talk.</p>
     <div class="contact-grid">
       <div class="card"><h3>Email</h3><p>[hello@capeedge.com]</p></div>
@@ -503,11 +620,27 @@ footer ul{list-style:none}footer li{margin-bottom:8px}footer a{text-decoration:n
   <div class="wrap">
     <div class="foot">
       <div>
-        <a class="logo" href="#top"><svg width="32" height="32" viewBox="0 0 40 40" aria-hidden="true"><circle cx="20" cy="20" r="19" fill="none" stroke="#1f6fae" stroke-width="1.5"/><path d="M17 9h6l1.5 17h-9z" fill="#fff"/><rect x="16.5" y="7" width="7" height="3" rx="1" fill="#1f6fae"/><path d="M5 29c4-3 8-3 12 0s8 3 12 0 6-2 6-2" stroke="#5fb3cf" stroke-width="2" fill="none"/></svg><div><span>CAPE EDGE</span><small>Clinical Peptide Supply</small></div></a>
+        <a class="logo" href="#top" aria-label="Cape Edge home"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 360 80" width="216" height="48" role="img" aria-label="Cape Edge, Clinical Peptide Supply">
+<g transform="translate(4 8)"><g>
+<polygon points="36.5,13.5 62,7 62,20" fill="#5fb3cf" opacity=".55"/>
+<polygon points="27.5,13.5 2,7 2,20" fill="#5fb3cf" opacity=".3"/>
+<polygon points="26.5,11 32,5.5 37.5,11" fill="#0a2540"/>
+<rect x="28" y="11" width="8" height="6.5" rx="1" fill="#9fd4ec"/>
+<rect x="26" y="17.5" width="12" height="2.2" rx=".6" fill="#0a2540"/>
+<polygon points="28.2,19.7 35.8,19.7 38.8,45 25.2,45" fill="#0a2540"/>
+<polygon points="27.1,29 36.9,29 37.6,34.5 26.4,34.5" fill="#1f6fae"/>
+<path d="M2 47.5 C14 43.5 22 45 32 45 C42 45 50 43.5 62 46.5 L62 49.5 C50 46.8 42 48.4 32 48.4 C22 48.4 14 47 2 51 Z" fill="#0a2540"/>
+<path d="M4 55.5 c5.3 -3.6 10.7 -3.6 16 0 s10.7 3.6 16 0 s10.7 -3.6 16 0 c3 2 5.6 2.2 8 1.4" stroke="#1f6fae" stroke-width="2.6" fill="none" stroke-linecap="round"/>
+<path d="M10 61 c4.6 -3 9.4 -3 14 0 s9.4 3 14 0 s9.4 -3 14 0" stroke="#5fb3cf" stroke-width="2.2" fill="none" stroke-linecap="round"/>
+</g></g>
+<text x="84" y="46" font-family="'Cormorant Garamond',Georgia,serif" font-weight="700" font-size="38" letter-spacing="3.5" fill="#0a2540">CAPE EDGE</text>
+<rect x="85" y="55" width="22" height="1.6" fill="#5fb3cf"/>
+<text x="113" y="60" font-family="Inter,Helvetica,Arial,sans-serif" font-weight="600" font-size="9.2" letter-spacing="2.6" fill="#1f6fae">CLINICAL PEPTIDE SUPPLY</text>
+</svg></a>
         <p style="margin-top:16px;max-width:360px">Pre-filled peptide pens for licensed practices. Cape Cod, Massachusetts.</p>
       </div>
       <div><h4>Explore</h4><ul><li><a href="#pen">How the pen works</a></li><li><a href="#stability">Built to last</a></li><li><a href="#catalog">Catalog</a></li><li><a href="#quality">Quality</a></li></ul></div>
-      <div><h4>Practices</h4><ul><li><a href="#apply">Open an account</a></li><li><a href="#regenerative">Regenerative partners</a></li><li><a href="#faq">FAQ</a></li><li><a href="#contact">Contact</a></li></ul></div>
+      <div><h4>Practices</h4><ul><li><a href="#apply">Become a partner</a></li><li><a href="#order">Order</a></li><li><a href="#story">Our story</a></li><li><a href="#regenerative">Regenerative partners</a></li><li><a href="#faq">FAQ</a></li><li><a href="#contact">Contact</a></li></ul></div>
     </div>
     <div class="disc">
       <p><strong>Important information.</strong> Cape Edge sells exclusively to verified licensed healthcare professionals. Products are not offered to consumers. Statements on this website have not been evaluated by the U.S. Food and Drug Administration. The products described are not FDA-approved drugs and are not intended to diagnose, treat, cure, mitigate or prevent any disease. No information on this site is medical advice or a recommendation for use in any patient.</p>
